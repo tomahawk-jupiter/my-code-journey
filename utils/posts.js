@@ -74,9 +74,7 @@ export async function getPostData(id) {
   // NOTE: autoLinker puts links within code into a tags
   // NOTE: line-numbers isn't working, it should number lines in code
   const processedContent = await remark()
-    .use(remarkPrism, {
-      plugins: ["autolinker", "line-numbers"],
-    })
+    .use(remarkPrism)
     .use(html, { sanitize: false })
     .process(matterResult.content);
   const contentHtml = processedContent.toString();
