@@ -21,6 +21,11 @@ export async function getStaticPaths() {
   };
 }
 
+// TODO:
+// Add meta data in Head for individual posts - keywords, description.
+// Check how next handles duplicate meta tags, ie inherited from layout.
+// Do I need to include the "key" attribute?
+
 export default function Post({ postData }) {
   return (
     <>
@@ -30,10 +35,23 @@ export default function Post({ postData }) {
 
       <article>
         <h1 className={utilStyles.headingXl}>{postData.title}</h1>
+
         <div className={utilStyles.lightText}>
           <Date dateString={postData.date} />
         </div>
-        <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+
+        <div>
+          {postData.tags.map((tag, index) => (
+            <span className={utilStyles.tagText} key={index}>
+              #{tag}{" "}
+            </span>
+          ))}
+        </div>
+
+        <div
+          className="blog-content-container"
+          dangerouslySetInnerHTML={{ __html: postData.contentHtml }}
+        />
       </article>
     </>
   );

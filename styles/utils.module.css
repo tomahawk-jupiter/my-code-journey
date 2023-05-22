@@ -1,3 +1,5 @@
+/* This utils.module.css is from the nextjs tutorial (I think) */
+
 .heading2Xl {
   font-size: 2.5rem;
   line-height: 1.2;
@@ -48,16 +50,20 @@
 }
 
 .lightText {
-  color: #666;
+  color: var(--text-color-fade);
 }
 
 .tagText {
-  color: orange;
+  color: var(--accent-color);
   font-size: 1rem;
 }
 
 .descriptionText {
-  color: #888;
+  color: var(--text-color-fade);
   font-style: italic;
   font-size: 0.85em;
+}
+
+.muted {
+  color: var(--muted-underline);
 }

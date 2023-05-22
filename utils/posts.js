@@ -8,7 +8,6 @@ import remarkPrism from "remark-prism"; // for syntax highlighting
 const postsDirectory = path.join(process.cwd(), "posts");
 
 export function getSortedPostsData() {
-  // Get file names under /posts
   const fileNames = fs.readdirSync(postsDirectory);
   const allPostsData = fileNames.map((fileName) => {
     // Remove ".md" from file name to get id
@@ -61,20 +60,16 @@ export async function getPostData(id) {
   const fullPath = path.join(postsDirectory, `${id}.md`);
   const fileContents = fs.readFileSync(fullPath, "utf8");
 
-  // Use gray-matter to parse the post metadata section
+  // Use gray-matter to parse the post metadata section,
+  // it will seperate the meta data and the content
   const matterResult = matter(fileContents);
 
-  // // Use remark to convert markdown into HTML string
-  // const processedContent = await remark()
-  //   .use(html)
-  //   .process(matterResult.content);
-  // const contentHtml = processedContent.toString();
+  // Use remark to convert markdown into HTML string
 
-  // For syntax highlighting using remark-prism
-  // NOTE: autoLinker puts links within code into a tags
-  // NOTE: line-numbers isn't working, it should number lines in code
+  // NOTE: there are plugin options for remarkPrism,
+  // eg. autoLinker to make urls clickable within code examples
   const processedContent = await remark()
-    .use(remarkPrism)
+    .use(remarkPrism, { transformInlineCode: true })
     .use(html, { sanitize: false })
     .process(matterResult.content);
   const contentHtml = processedContent.toString();

@@ -7,9 +7,13 @@ tags:
 description: "This is an example blog post, it includes some code examples."
 ---
 
-This example is to try out how code is displayed. How to get syntax highlighting working.
+This example is to try out how code is displayed. How to get syntax highlighting working. Example [of a link](#h2-header) links to header below. And an external [NextJS](https://nextjs.org/) link.
 
-This is an inline code example: <code class="inline-code">let word = "hello";</code>.
+This is an inline code example: <code class="inline-code">let word = "hello";</code>. It uses html code tags with the class **inline-code**.
+
+## H2 Header
+
+Another inline code `$ yarn dev` example. This one uses single backticks, markdown style.
 
 ```javascript
 // hello.js

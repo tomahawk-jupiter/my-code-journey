@@ -34,27 +34,30 @@ export default function Layout({ children }) {
       </Head>
 
       <header className={styles.header}>
-        {/* <h2 className={utilStyles.headingLg}>
-          <Link href="/" className={utilStyles.colorInherit}>
-            {SITE_TITLE}
+        <Link href="/">
+          <div>
+            <em>MyCodeJourney</em>
+          </div>
+        </Link>
+
+        <div className={styles.navLinkContainer}>
+          <Link
+            className={`${styles.navLink} ${
+              currentRoute === "/" ? styles.navLinkActive : ""
+            }`}
+            href="/"
+          >
+            Home
           </Link>
-        </h2> */}
-        <Link
-          className={`${styles.navLink} ${
-            currentRoute === "/" ? styles.navLinkActive : ""
-          }`}
-          href="/"
-        >
-          Home
-        </Link>
-        <Link
-          className={`${styles.navLink} ${
-            currentRoute === "/about" ? styles.navLinkActive : ""
-          }`}
-          href="/about"
-        >
-          About
-        </Link>
+          <Link
+            className={`${styles.navLink} ${
+              currentRoute === "/about" ? styles.navLinkActive : ""
+            }`}
+            href="/about"
+          >
+            About
+          </Link>
+        </div>
       </header>
 
       <main>{children}</main>
@@ -65,13 +68,13 @@ export default function Layout({ children }) {
             <Link className={styles.footerLink} href="/">
               Home
             </Link>
-            <Link className={styles.footerLink} href="/">
+            <Link className={styles.footerLink} href="/about">
               About
             </Link>
           </div>
 
           <div className={styles.footerLinksCol}>
-            <Link className={styles.footerLink} href="/">
+            <Link className={styles.footerLink} href="/contact">
               Contact
             </Link>
             <Link className={styles.footerLink} href="/">
@@ -80,7 +83,7 @@ export default function Layout({ children }) {
           </div>
         </div>
 
-        <div className={utilStyles.lightText}>Copyright © {SITE_TITLE}</div>
+        <div className={utilStyles.muted}>Copyright © {SITE_TITLE}</div>
       </div>
     </div>
   );

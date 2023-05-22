@@ -5,9 +5,13 @@
 - [Project Structure](#project-structure)
   - [Blog Data: Utils](#blog-data-utils)
   - [Layout](#layout)
+  - [Global Styles - my defaults for html tags](#global-styles---my-defaults-for-html-tags)
 - [gray-matter](#gray-matter)
 - [Fonts with NextJS](#fonts-with-nextjs)
 - [Active Link Style](#active-link-style)
+- [Style List Bullet Points](#style-list-bullet-points)
+- [Prism syntax highlighting limitations](#prism-syntax-highlighting-limitations)
+- [Footer position](#footer-position)
 
 ## Project Structure
 
@@ -26,6 +30,10 @@ I use a single layout component to wrap all pages by applying it in the `_app.js
 This is where the `SITE_TITLE` is set.
 
 [Page Top](#contents)
+
+### Global Styles - my defaults for html tags
+
+This seems to be the easiest place to set some default html tag styles that will apply to blog posts. They may be overwritten by modules.css styles that wrap around the blog post content, either accidently or intentionally.
 
 ## gray-matter
 
@@ -88,3 +96,54 @@ export default function Component() {
   );
 }
 ```
+
+[Page Top](#contents)
+
+## Style List Bullet Points
+
+```css
+ul {
+  list-style: none; /* Remove default bullets */
+}
+
+ul li::before {
+  content: "\2022"; /* Add content: \2022 is the CSS Code/unicode for a bullet */
+  color: var(--accent-color); /* Change the color */
+  font-weight: bold; /* If you want it to be bold */
+  display: inline-block; /* Needed to add space between the bullet and the text */
+  width: 1em; /* Also needed for space (tweak if needed) */
+  margin-left: -1em; /* Also needed for space (tweak if needed) */
+}
+```
+
+## Prism syntax highlighting limitations
+
+There doesn't seem to be a way to do inline code with certain characters like `<` or `>`.
+
+Quotes used inside inline code markdown (backticks) will be replaced with html entities. Using `<code>` tags will allow the use of quotes.
+
+[Page Top](#contents)
+
+## Footer position
+
+The footer should always be at the bottom of the page, even if the content above it doesn't take up much space.
+
+- [Article](https://www.freecodecamp.org/news/how-to-keep-your-footer-where-it-belongs-59c6aa05c59c/)
+
+The example below is a **work-in-proress**. The width of the footer was spilling out of the parent container when screen got narrower.
+
+```css
+.footer-parent-container {
+  position: relative; /* because footer is absolute */
+  min-height: 100vh; /* keep footer at bottom of page */
+  padding-bottom: 10rem; /* this should match the footer height, but what about responsiveness? */
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+```
+
+[Page Top](#contents)
