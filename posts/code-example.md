@@ -1,6 +1,10 @@
 ---
 title: "Code Example Blog Post"
 date: "2023-05-06"
+tags:
+  - example
+  - javascript
+description: "This is an example blog post, it includes some code examples."
 ---
 
 This example is to try out how code is displayed. How to get syntax highlighting working.

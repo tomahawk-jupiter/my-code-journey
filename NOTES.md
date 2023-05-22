@@ -7,6 +7,7 @@
   - [Layout](#layout)
 - [gray-matter](#gray-matter)
 - [Fonts with NextJS](#fonts-with-nextjs)
+- [Active Link Style](#active-link-style)
 
 ## Project Structure
 
@@ -21,6 +22,8 @@
 ### Layout
 
 I use a single layout component to wrap all pages by applying it in the `_app.js`. This is where I will put the navbar/header and footer sections.
+
+This is where the `SITE_TITLE` is set.
 
 [Page Top](#contents)
 
@@ -66,3 +69,22 @@ export default function Layout({ children, home }) {
 ```
 
 [Page Top](#contents)
+
+## Active Link Style
+
+The `useRouter` can be used to get the route name.
+
+```javascript
+import { useRouter } from "next/router";
+
+export default function Component() {
+  const router = useRouter();
+  const currentRoute = router.pathname;
+
+  return (
+    <Link className={currentRoute === "/" ? "active-style-class" : ""} href="/">
+      Home
+    </Link>
+  );
+}
+```

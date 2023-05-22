@@ -1,15 +1,53 @@
 .container {
-  max-width: 36rem;
+  /* max-width: 36rem; */
+  max-width: 48rem;
   padding: 0 1rem;
   margin: 3rem auto 6rem;
 }
 
 .header {
   display: flex;
-  flex-direction: column;
   align-items: center;
+  justify-content: flex-end;
+  gap: 1rem;
 }
 
-.backToHome {
+.navLinkActive {
+  border-bottom: solid orange;
+}
+
+.navLink {
+  padding-bottom: 0.25rem;
+}
+
+.navLink:hover {
+  color: orange;
+  transition-duration: 0.2s;
+}
+
+.footerSection {
   margin: 3rem 0 0;
+  border-top: solid;
+  padding-top: 2rem;
+}
+
+.footerLinksContainer {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 4rem;
+}
+
+.footerLinksCol {
+  display: flex;
+  flex-direction: column;
+  margin-right: auto;
+}
+
+.footerLink {
+  margin-bottom: 1rem;
+}
+
+.footerLink:hover {
+  color: #ddd;
+  transition-duration: 0.2s;
 }

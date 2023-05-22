@@ -11,6 +11,7 @@ TODOS:
   - Copyright, navigation, links (github), contact.
 - Basic css layout styling.
 - Color & typography css - make it look nice.
+  - The html tags will have to be styled in `globals.css`, this will be the simplest way to style the blog posts.
 - Front-matter
   - what meta data do I want to include, eg. categories, tags.
   - excerpt
