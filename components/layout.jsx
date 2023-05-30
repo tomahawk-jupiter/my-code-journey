@@ -60,7 +60,7 @@ export default function Layout({ children }) {
         </div>
       </header>
 
-      <main>{children}</main>
+      <main className={styles.pageContent}>{children}</main>
 
       <div className={`${styles.footerSection} ${utilStyles.lightText}`}>
         <div className={styles.footerLinksContainer}>

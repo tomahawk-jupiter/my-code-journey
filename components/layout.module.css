@@ -1,9 +1,21 @@
+/*
+  * Styles used in layout.jsx component
+*/
+
 .container {
-  /* max-width: 36rem; */
   max-width: 48rem;
   padding: 0 1rem;
-  /* margin: 3rem auto 6rem; */
   margin: 0 auto;
+
+  /* To position the footer */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Expand page content to position footer */
+.pageContent {
+  flex-grow: 1;
 }
 
 .header {
@@ -25,7 +37,7 @@
 }
 
 .navLinkActive {
-  border-bottom: solid var(--accent-color);
+  border-bottom: solid 2px var(--accent-color);
 }
 
 .navLink {
@@ -37,6 +49,8 @@
   color: var(--accent-color);
   transition-duration: 0.2s;
 }
+
+/* Footer */
 
 .footerSection {
   margin: 4rem 0 1rem;

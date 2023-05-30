@@ -11,6 +11,8 @@ This example is to try out how code is displayed. How to get syntax highlighting
 
 This is an inline code example: <code class="inline-code">let word = "hello";</code>. It uses html code tags with the class **inline-code**.
 
+Link to previous post [ssg-ssr](/blog/ssg-ssr)
+
 ## H2 Header
 
 Another inline code `$ yarn dev` example. This one uses single backticks, markdown style.

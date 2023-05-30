@@ -1,5 +1,7 @@
 # Notes
 
+Some notes.
+
 ## Contents
 
 - [Project Structure](#project-structure)
@@ -128,22 +130,25 @@ Quotes used inside inline code markdown (backticks) will be replaced with html e
 
 The footer should always be at the bottom of the page, even if the content above it doesn't take up much space.
 
-- [Article](https://www.freecodecamp.org/news/how-to-keep-your-footer-where-it-belongs-59c6aa05c59c/)
-
-The example below is a **work-in-proress**. The width of the footer was spilling out of the parent container when screen got narrower.
-
 ```css
-.footer-parent-container {
-  position: relative; /* because footer is absolute */
-  min-height: 100vh; /* keep footer at bottom of page */
-  padding-bottom: 10rem; /* this should match the footer height, but what about responsiveness? */
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
-.footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
+/* Grow page content to push footer to the bottom */
+.pageContent {
+  flex-grow: 1;
 }
 ```
 
 [Page Top](#contents)
+
+## Links to previous posts
+
+This seems to be simple. It works in dev mode. Just do the link like this:
+
+```md
+[A previous post](/blog/post-title)
+```

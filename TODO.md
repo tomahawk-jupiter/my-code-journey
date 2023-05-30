@@ -8,24 +8,19 @@ TODOS:
 - ✅ changed to using a single layout, applied in `_app.js`.
 - ✅ Navbar & header/logo - this can go in the `layout` file.
 - ✅ Footer - can also go in the `layout` file.
-- Basic css layout styling.
-  - Position footer so it stays at bottom of page. See `NOTES.md`
-- Fixed navbar
+- ✅ Position footer so it stays at bottom of page. See `NOTES.md`
+- ✅ Fixed navbar
+- ✅ remark-gfm - use this to include some github flavoured markdown features like tables and checklist. Add it to remark in `utils/posts.js` like so: `remark().use(remarkGfm)`.
 - Logo
-- Color & typography css - make it look nice.
-  - The html tags will have to be styled in `globals.css`, this will be the simplest way to style the blog posts.
-- Front-matter
-  - what meta data do I want to include, eg. categories, tags.
-  - excerpt
-- Tweak code examples style, particularly font-size.
-- remark-gfm - use this to include some github flavoured markdown features like tables and checklist. Add it to remark in `utils/posts.js` like so: `remark().use(remarkGfm)`.
-- Internal links between blog posts.
 - Dynamic html meta tags for individual posts (to help with SEO).
+  - ✅ title
+  - keywords
+  - description
 - Clickable categorie/tags, list all posts containing the relevant tag. Add another function in `utils/posts.js`.
 
 - PAGE: Home page - short intro & recent posts.
 - PAGE: About page - about me & the site. Maybe contact form can go here?
-- PAGE: Cheatsheets / quick reference - git commands, bash commands.
+- PAGE: Cheatsheets / quick reference - git commands, bash commands, things like that.
 - PAGE: Contact form.
 
 EXTRAS
