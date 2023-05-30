@@ -152,3 +152,30 @@ This seems to be simple. It works in dev mode. Just do the link like this:
 ```md
 [A previous post](/blog/post-title)
 ```
+
+## Light theme toggle
+
+You can style css based on an attribute that is set in the javascript. In this example, the "default" is dark. The light color variables are only used when the `data-theme` attribute is set to light. Setting it to dark will go back to using the default because there is no specific rule for it.
+
+```css
+:root {
+  --bg-color: black;
+  --fg-color: white;
+}
+[data-theme="light"] {
+  --bg-color: white;
+  --fg-color: black;
+}
+```
+
+```javascript
+const toggleTheme = () => {
+  if (darkTheme) {
+    document.documentElement.setAttribute("data-theme", "light");
+    setDarkTheme(false);
+  } else {
+    document.documentElement.setAttribute("data-theme", "dark");
+    setDarkTheme(true);
+  }
+};
+```

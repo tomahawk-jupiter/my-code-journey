@@ -2,8 +2,10 @@ import Head from "next/head";
 import styles from "./layout.module.css";
 import utilStyles from "../styles/utils.module.css";
 import Link from "next/link";
+import Image from "next/image";
 import { Inter } from "next/font/google";
 import { useRouter } from "next/router";
+import { useState } from "react";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -12,6 +14,17 @@ export const SITE_TITLE = "myCodeJourney";
 export default function Layout({ children }) {
   const router = useRouter();
   const currentRoute = router.pathname;
+  const [darkTheme, setDarkTheme] = useState(true);
+
+  const toggleTheme = () => {
+    if (darkTheme) {
+      document.documentElement.setAttribute("data-theme", "light");
+      setDarkTheme(false);
+    } else {
+      document.documentElement.setAttribute("data-theme", "dark");
+      setDarkTheme(true);
+    }
+  };
 
   return (
     <div className={`${styles.container} ${inter.className}`}>
@@ -36,7 +49,8 @@ export default function Layout({ children }) {
       <header className={styles.header}>
         <Link href="/">
           <div>
-            <em>MyCodeJourney</em>
+            <div>LOGO</div>
+            {/* <em>MyCodeJourney</em> */}
           </div>
         </Link>
 
@@ -57,6 +71,15 @@ export default function Layout({ children }) {
           >
             About
           </Link>
+
+          <button className={styles.themeToggle} onClick={toggleTheme}>
+            <Image
+              src={`/icons/${darkTheme ? "sun" : "moon"}.svg`}
+              width={24}
+              height={24}
+              alt=""
+            />
+          </button>
         </div>
       </header>
 

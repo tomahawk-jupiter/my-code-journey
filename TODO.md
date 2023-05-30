@@ -11,11 +11,12 @@ TODOS:
 - ✅ Position footer so it stays at bottom of page. See `NOTES.md`
 - ✅ Fixed navbar
 - ✅ remark-gfm - use this to include some github flavoured markdown features like tables and checklist. Add it to remark in `utils/posts.js` like so: `remark().use(remarkGfm)`.
-- Logo
+- ✅ Color theme toggle.
 - Dynamic html meta tags for individual posts (to help with SEO).
   - ✅ title
   - keywords
   - description
+- Logo
 - Clickable categorie/tags, list all posts containing the relevant tag. Add another function in `utils/posts.js`.
 
 - PAGE: Home page - short intro & recent posts.

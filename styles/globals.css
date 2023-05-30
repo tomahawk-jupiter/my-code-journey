@@ -5,12 +5,21 @@
   --text-color-fade: #666;
   --accent-color: #ffa500;
   --muted-underline: #333;
-  --test: purple;
   --inline-code-bg: #1e1e1e;
-  --inline-code-fg: #ce9178;
+  /* --inline-code-fg: #ce9178; */
   --inline-code-fg: var(--text-color);
 
   --line-height: 1.6;
+}
+
+[data-theme="light"] {
+  --bg-color: white;
+  --fg-color: black;
+  --text-color: black;
+  --accent-color: rgb(23, 179, 218);
+  --inline-code-bg: #1e1e1e;
+  /* --inline-code-fg: #ce9178; */
+  --inline-code-fg: #b0b0b0;
 }
 
 * {
