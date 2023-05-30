@@ -16,6 +16,8 @@ TODOS:
   - ✅ title
   - keywords
   - description
+- CSS for content rendered from markdown
+  - ✅ Block quote
 - Logo
 - Clickable categorie/tags, list all posts containing the relevant tag. Add another function in `utils/posts.js`.
 

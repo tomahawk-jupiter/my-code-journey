@@ -64,7 +64,7 @@
 
 .footerSection {
   margin: 4rem 0 1rem;
-  border-top: solid;
+  border-top: solid var(--accent-color);
   padding-top: 2rem;
 }
 
