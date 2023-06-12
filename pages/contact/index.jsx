@@ -6,6 +6,7 @@ export default function Contact() {
       <p>TODO: form not currently functional.</p>
 
       <form
+        className="contact-form"
         action="https://formsubmit.co/8bab09675a3e92545540666f4bb4a835"
         method="POST"
       >
@@ -34,7 +35,7 @@ export default function Contact() {
           name="message"
           required
         ></textarea>
-        <button type="submit">Submit</button>
+        <button type="submit">Send</button>
       </form>
     </>
   );

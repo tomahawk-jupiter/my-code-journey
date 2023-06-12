@@ -8,6 +8,7 @@
   --inline-code-bg: #1e1e1e;
   /* --inline-code-fg: #ce9178; */
   --inline-code-fg: var(--text-color);
+  --input-border-color: #ccc;
 
   --line-height: 1.6;
 }
@@ -31,9 +32,6 @@
 html,
 body {
   max-width: 100vw;
-
-  /* Why was this set to hidden in original example? */
-  /* overflow-x: hidden; */
 }
 
 body {
@@ -103,4 +101,54 @@ td {
 .blog-content-container a:hover {
   border-color: var(--accent-color);
   transition-duration: 0.2s;
+}
+
+/* Contact Form */
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form button {
+  background-color: var(--accent-color);
+  color: var(--bg-color);
+  border: none;
+  padding: 0.5em 0;
+  cursor: pointer;
+  font-size: 1.25rem;
+  font-weight: 500;
+  border-radius: 10px;
+}
+
+.contact-form input {
+  font-size: 1rem;
+  padding: 1em;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  /* border: solid 1px var(--text-color-fade); */
+  border: solid 1px var(--input-border-color);
+}
+
+.contact-form input:focus {
+  outline: solid var(--accent-color);
+}
+
+.contact-form textarea {
+  font-size: 1rem;
+  padding: 1em;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  resize: none;
+  width: 100%;
+  min-height: 200px;
+  border: solid 1px var(--input-border-color);
+}
+
+.contact-form textarea:focus {
+  outline: solid var(--accent-color);
+}
+
+.contact-form label {
+  margin-bottom: 0.5rem;
 }
