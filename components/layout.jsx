@@ -49,7 +49,7 @@ export default function Layout({ children }) {
       <header className={styles.header}>
         <Link href="/">
           <div>
-            <div>LOGO</div>
+            <div>BLOG</div>
             {/* <em>MyCodeJourney</em> */}
           </div>
         </Link>

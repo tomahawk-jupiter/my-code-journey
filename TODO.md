@@ -19,12 +19,12 @@ TODOS:
 - CSS for content rendered from markdown
   - ✅ Block quote
 - Logo
-- Clickable categorie/tags, list all posts containing the relevant tag. Add another function in `utils/posts.js`.
-
-- PAGE: Home page - short intro & recent posts.
-- PAGE: About page - about me & the site. Maybe contact form can go here?
-- PAGE: Cheatsheets / quick reference - git commands, bash commands, things like that.
-- PAGE: Contact form.
+- Add some real blog posts.
+- Clickable categorie/tags, list all posts containing the relevant tag. Add another function in `utils/posts.js` to returned the filtered posts.
+- TODO: Contact form.
+  - ✅ html
+  - CSS
+  - connect to email service
 
 EXTRAS
 
@@ -34,3 +34,5 @@ EXTRAS
   - Category/tag dropdown select or button of some kind.
   - Search. Changes displayed posts as user types.
 - Comments / message board.
+- PAGE: my projects.
+- PAGE: Cheatsheets / quick reference - git commands, bash commands, things like that.

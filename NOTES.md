@@ -14,6 +14,7 @@ Some notes.
 - [Style List Bullet Points](#style-list-bullet-points)
 - [Prism syntax highlighting limitations](#prism-syntax-highlighting-limitations)
 - [Footer position](#footer-position)
+- [Form Submit](#form-submit)
 
 ## Project Structure
 
@@ -179,3 +180,22 @@ const toggleTheme = () => {
   }
 };
 ```
+
+## Form Submit
+
+[Form Submit](https://formsubmit.co/). This is for connecting your html form to your email without exposing your email address.
+
+Each form needs activating from the URL its sent from. Send the form and you will get an email with an activation button, click it and you'll get a string of random-like characters to put as the value for the form action attribute.
+
+Example:
+
+```html
+<form
+  action="https://formsubmit.co/8bab09675a3e92545540666f4bb4a000"
+  method="POST"
+></form>
+```
+
+I will need to do this after deploying my blog site.
+
+[Page Top](#contents)
