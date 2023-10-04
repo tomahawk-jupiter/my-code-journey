@@ -14,17 +14,16 @@ TODOS:
 - ✅ Color theme toggle.
 - Dynamic html meta tags for individual posts (to help with SEO).
   - ✅ title
-  - keywords
-  - description
+  - TODO: keywords
+  - TODO: description
 - CSS for content rendered from markdown
   - ✅ Block quote
-- Logo
-- Add some real blog posts.
-- Clickable categorie/tags, list all posts containing the relevant tag. Add another function in `utils/posts.js` to returned the filtered posts.
+- TODO: Add some real blog posts. Look at various notes for ideas.
+- TODO: Clickable categorie/tags, list all posts containing the relevant tag. Add another function in `utils/posts.js` to returned the filtered posts.
 - TODO: Contact form.
   - ✅ html
-  - CSS
-  - connect to email service
+  - ✅ CSS
+  - TODO: connect form to formSubmit (need to deploy site first)
 
 EXTRAS
 

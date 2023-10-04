@@ -15,6 +15,7 @@ Some notes.
 - [Prism syntax highlighting limitations](#prism-syntax-highlighting-limitations)
 - [Footer position](#footer-position)
 - [Form Submit](#form-submit)
+- [Deploying Your NextJS App](#deploying-your-nextjs-app)
 
 ## Project Structure
 
@@ -197,5 +198,27 @@ Example:
 ```
 
 I will need to do this after deploying my blog site.
+
+[Page Top](#contents)
+
+## Deploying Your NextJS App
+
+### Push to GitHub
+
+- Create a new empty github repo.
+- Initialize local project as a git repo if not already done.
+- Push local repo to github.
+
+```bash
+git remote add origin https://github.com/<username>/nextjs-blog.git
+git push -u origin main
+```
+
+### Deploy to Vercel
+
+- Create vercel account or sign in.
+- Import a repo from github (using the vercel dashboard). You have to give vercel permission first, either for a specific repo or all of them.
+- Vercel auto detects your using NextJS for your app.
+- Deploy and you'll get a URL for your project.
 
 [Page Top](#contents)
