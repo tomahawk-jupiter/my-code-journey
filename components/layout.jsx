@@ -100,7 +100,10 @@ export default function Layout({ children }) {
             <Link className={styles.footerLink} href="/contact">
               Contact
             </Link>
-            <Link className={styles.footerLink} href="/">
+            <Link
+              className={styles.footerLink}
+              href="https://github.com/tomahawk-jupiter?tab=repositories"
+            >
               GitHub
             </Link>
           </div>

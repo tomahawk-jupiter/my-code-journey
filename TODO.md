@@ -24,6 +24,7 @@ TODOS:
   - ✅ html
   - ✅ CSS
   - TODO: connect form to formSubmit (need to deploy site first)
+- TODO: create a favicon/logo.
 
 EXTRAS
 

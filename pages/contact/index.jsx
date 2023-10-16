@@ -3,8 +3,6 @@ export default function Contact() {
     <>
       <h1>Contact</h1>
 
-      <p>TODO: form not currently functional.</p>
-
       <form
         className="contact-form"
         action="https://formsubmit.co/8bab09675a3e92545540666f4bb4a835"
@@ -14,6 +12,7 @@ export default function Contact() {
         <input type="hidden" name="_subject" value="Sent from my nextjs blog" />
 
         {/* _next choose a URL to redirect to after submitting. Default is FormSubmit thankyou page if not included */}
+        <input type="hidden" name="_next" value="/confirmation" />
 
         {/* QUESTION: will a relative url work or does the URL need to be absolute??? */}
         <input type="hidden" name="_next" value="/" />

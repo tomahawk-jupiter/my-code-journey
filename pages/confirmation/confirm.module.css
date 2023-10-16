@@ -1,0 +1,12 @@
+.center {
+  margin-top: 8rem;
+  text-align: center;
+}
+
+.link {
+  display: inline-block;
+  border-bottom: solid var(--accent-color);
+}
+.link:hover {
+  color: var(--accent-color);
+}
