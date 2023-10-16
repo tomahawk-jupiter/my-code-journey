@@ -210,7 +210,7 @@ I will need to do this after deploying my blog site.
 - Push local repo to github.
 
 ```bash
-git remote add origin https://github.com/<username>/nextjs-blog.git
+git remote add origin https://github.com/<username>/nextjs-blog.git # get this from the github dashboard
 git push -u origin main
 ```
 
@@ -220,5 +220,8 @@ git push -u origin main
 - Import a repo from github (using the vercel dashboard). You have to give vercel permission first, either for a specific repo or all of them.
 - Vercel auto detects your using NextJS for your app.
 - Deploy and you'll get a URL for your project.
+- Push changes to Github for auto re-deploy.
+
+Nice & easy!
 
 [Page Top](#contents)

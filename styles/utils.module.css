@@ -47,6 +47,10 @@
 
 .listItem {
   margin: 0 0 1.25rem;
+  padding: 0 1rem;
+}
+.listItem:hover {
+  border-left: solid;
 }
 
 .lightText {
@@ -66,4 +70,11 @@
 
 .muted {
   color: var(--muted-underline);
+}
+
+.postTitleLink {
+  margin-bottom: 0;
+}
+.postTitleLink:hover {
+  color: var(--accent-color);
 }

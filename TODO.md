@@ -1,4 +1,4 @@
-# Notes
+# TODOs
 
 TODOS:
 
@@ -14,8 +14,8 @@ TODOS:
 - ✅ Color theme toggle.
 - Dynamic html meta tags for individual posts (to help with SEO).
   - ✅ title
-  - TODO: keywords
-  - TODO: description
+  - ✅: keywords
+  - ✅: description
 - CSS for content rendered from markdown
   - ✅ Block quote
 - TODO: Add some real blog posts. Look at various notes for ideas.

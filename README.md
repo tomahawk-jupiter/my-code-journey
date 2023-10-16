@@ -25,6 +25,8 @@ NOTE: I could not get syntax highlighting working using the Next App Router, so 
 ## Start dev server
 
 ```sh
-yarn dev
-# then go to localhost:3000 or whatever url it gives in the console
+yarn # install dependencies
+yarn dev # start dev server
 ```
+
+Then go to `localhost:3000` or whatever url it gives in the console.

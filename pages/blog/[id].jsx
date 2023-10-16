@@ -31,6 +31,8 @@ export default function Post({ postData }) {
     <>
       <Head>
         <title>{postData.title}</title>
+        <meta name="description" content={postData.description} />
+        <meta name="keywords" content={postData.tags.join(", ")} />
       </Head>
 
       <article>
