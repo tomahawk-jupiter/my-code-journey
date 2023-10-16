@@ -18,9 +18,6 @@ export default function Contact() {
           value="https://my-code-journey.vercel.app/confirmation"
         />
 
-        {/* QUESTION: will a relative url work or does the URL need to be absolute??? */}
-        <input type="hidden" name="_next" value="/" />
-
         <label for="name">Name</label>
         <input placeholder="Name" type="text" id="name" name="name" />
         <label for="mail">Email</label>
