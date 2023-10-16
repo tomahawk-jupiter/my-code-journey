@@ -12,7 +12,11 @@ export default function Contact() {
         <input type="hidden" name="_subject" value="Sent from my nextjs blog" />
 
         {/* _next choose a URL to redirect to after submitting. Default is FormSubmit thankyou page if not included */}
-        <input type="hidden" name="_next" value="/confirmation" />
+        <input
+          type="hidden"
+          name="_next"
+          value="https://my-code-journey.vercel.app/confirmation"
+        />
 
         {/* QUESTION: will a relative url work or does the URL need to be absolute??? */}
         <input type="hidden" name="_next" value="/" />
